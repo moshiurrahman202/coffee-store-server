@@ -84,6 +84,7 @@ async function run() {
         }
       }
       const result = await usersCollection.updateOne(query,updatedQuery)
+      res.send(result)
     })
 
     app.delete("/users/:id", async(req, res) => {
